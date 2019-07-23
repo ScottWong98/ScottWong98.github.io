@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="VIM相关"><meta name="keywords" content="VIM, Scott's Blog"><link rel="alternate" href="/default" title="Scott's Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0">
+<link rel="canonical" href="scotty.ink/2019/02/20/VIM相关/">
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css"><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css"><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0">
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true,"latex":true};
+</script>
+
+    <title>VIM相关 - Scott's Blog</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Scott's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">首页
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">归档
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类
+          </li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Scott's Blog</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            归档
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            标签
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            分类
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/about/">
+            关于
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">VIM相关
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2019-02-20
+        </span><span class="post-category">
+            <a href="/categories/Linux/">Linux</a>
+            <a href="/categories/Linux/VIM/">VIM</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置VIM中不同模式下光标显示不同"><span class="toc-text">设置VIM中不同模式下光标显示不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Vim-plug"><span class="toc-text">安装Vim-plug</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装curl"><span class="toc-text">安装curl</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载"><span class="toc-text">下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插件"><span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#goyo-vim"><span class="toc-text">goyo.vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#limelight-vim"><span class="toc-text">limelight.vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#airline"><span class="toc-text">airline</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim主题：vim-monokai-tasty"><span class="toc-text">vim主题：vim-monokai-tasty</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NERDTree"><span class="toc-text">NERDTree</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim实现与系统剪贴板的共享"><span class="toc-text">vim实现与系统剪贴板的共享</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim切换分屏快捷键修改"><span class="toc-text">vim切换分屏快捷键修改</span></a></li></ol></li></ol>
+    </div>
+  </div><div class="post-content"><blockquote>
+<p>VIM中遇到的问题及解决方案</p>
+</blockquote>
+<a id="more"></a>
+
+<p>操作系统：Ubuntu1804</p>
+<h3 id="设置VIM中不同模式下光标显示不同"><a href="#设置VIM中不同模式下光标显示不同" class="headerlink" title="设置VIM中不同模式下光标显示不同"></a>设置VIM中不同模式下光标显示不同</h3><p>进入<code>~/.vimrc</code>文件，加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if has(&quot;autocmd&quot;)</span><br><span class="line">  au VimEnter,InsertLeave * silent execute &apos;!echo -ne &quot;\e[1 q&quot;&apos; | redraw!</span><br><span class="line">  au InsertEnter,InsertChange *</span><br><span class="line">    \ if v:insertmode == &apos;i&apos; |</span><br><span class="line">    \   silent execute &apos;!echo -ne &quot;\e[5 q&quot;&apos; | redraw! |</span><br><span class="line">    \ elseif v:insertmode == &apos;r&apos; |</span><br><span class="line">    \   silent execute &apos;!echo -ne &quot;\e[3 q&quot;&apos; | redraw! |</span><br><span class="line">    \ endi</span><br><span class="line">  au VimLeave * silent execute &apos;!echo -ne &quot;\e[ q&quot;&apos; | redraw!</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+
+<p>此时在插入模式下，光标为<code>|</code>，并且光标闪烁。</p>
+<p>如果不想让光标闪烁，将上述代码中的<code>1</code>, <code>5</code>, <code>3</code> 数字分别加上<code>1</code> 变成<code>2</code>, <code>6</code>, <code>4</code>即可</p>
+<h3 id="安装Vim-plug"><a href="#安装Vim-plug" class="headerlink" title="安装Vim-plug"></a>安装Vim-plug</h3><p>Reference：</p>
+<p>​    <a href="https://linux.cn/article-9751-1.html" target="_blank" rel="noopener">https://linux.cn/article-9751-1.html</a><br>​        <a href="https://github.com/junegunn/vim-plug" target="_blank" rel="noopener">https://github.com/junegunn/vim-plug</a></p>
+<h4 id="安装curl"><a href="#安装curl" class="headerlink" title="安装curl"></a>安装curl</h4><p>终端输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install curl</span><br></pre></td></tr></table></figure>
+
+<p>即可安装</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>终端输入<code>$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code></p>
+<p>此时如果显示<code>curl: (7) Failed to connect to 127.0.0.1 port 45997: 拒绝连接</code></p>
+<p>在上述命令前加入<code>sudo</code>即可</p>
+<p>即<code>$ sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code></p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>打开<code>~/.vimrc</code>，加入以下语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">call plug#begin(&apos;~/.vim/plugged&apos;)</span><br><span class="line">Plug &apos;itchyny/lightline.vim&apos;  &quot;中间加入其他plug</span><br><span class="line">call plug#end()</span><br></pre></td></tr></table></figure>
+
+<p>然后重新加载进入vim，在<code>NOMAL</code>模式下</p>
+<ul>
+<li>检查状态：<code>:PlugStatus</code></li>
+<li>安装插件：<code>:PlugInstall</code></li>
+<li>更新插件：<code>:PlugUpdate</code>    按<code>d</code>可查看更改，或者输入<code>:PlugDIff</code></li>
+<li>删除插件：首先删除或者注释掉在<code>.vimrc</code>中添加的plug命令，然后重启vim，再输入<code>PlugClean</code></li>
+<li>升级vim-plug：<code>PlugUpgrade</code></li>
+</ul>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><h4 id="goyo-vim"><a href="#goyo-vim" class="headerlink" title="goyo.vim"></a>goyo.vim</h4><p>  GitHub：<a href="https://github.com/junegunn/goyo.vim" target="_blank" rel="noopener">https://github.com/junegunn/goyo.vim</a></p>
+<ul>
+<li>在<code>~/.vimrc</code>中加入<code>Plug &#39;junegunn/goyo.vim&#39;</code></li>
+<li>在vim中运行<code>:PlugInstall</code></li>
+<li>使用：打开：<code>:Goyo</code></li>
+</ul>
+<p>​        关闭：<code>:Goyo!</code></p>
+<h4 id="limelight-vim"><a href="#limelight-vim" class="headerlink" title="limelight.vim"></a>limelight.vim</h4><ul>
+<li>在<code>~/.vimrc</code>中加入<code>Plug &#39;junegunn/limelight.vim&#39;</code></li>
+<li>在vim中运行<code>:PlugInstall</code></li>
+<li>使用：打开：<code>:Limelight</code></li>
+</ul>
+<p>​       关闭：<code>:Limelight!</code></p>
+<h4 id="airline"><a href="#airline" class="headerlink" title="airline"></a>airline</h4><p>GitHub：<a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="noopener">https://github.com/vim-airline/vim-airline</a></p>
+<p>​        <a href="https://github.com/vim-airline/vim-airline-themes" target="_blank" rel="noopener">https://github.com/vim-airline/vim-airline-themes</a></p>
+<ul>
+<li>在<code>~/.vimrc</code>中加入<code>Plug &#39;vim-airline/vim-airline-themes&#39;</code>和<code>Plug &#39;vim-airline/vim-airline&#39;</code></li>
+<li>在vim中运行<code>:PlugInstall</code></li>
+<li>在<code>~/.vimrc</code>中加入<code>let g:airline_theme=&#39;bubblegum&#39;</code>，其中<code>bubblegum</code>为主题名字</li>
+<li>此时airline可能不会显示箭头，为了让其显示箭头，我们还需要在<code>~/.vimrc</code>中加入以下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">if !exists(&apos;g:airline_symbols&apos;)</span><br><span class="line">  let g:airline_symbols = &#123;&#125;</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">&quot; unicode symbols</span><br><span class="line">let g:airline_left_sep = &apos;»&apos;</span><br><span class="line">let g:airline_left_sep = &apos;▶&apos;</span><br><span class="line">let g:airline_right_sep = &apos;«&apos;</span><br><span class="line">let g:airline_right_sep = &apos;◀&apos;</span><br><span class="line">let g:airline_symbols.crypt = &apos;🔒&apos;</span><br><span class="line">let g:airline_symbols.linenr = &apos;☰&apos;</span><br><span class="line">let g:airline_symbols.linenr = &apos;␊&apos;</span><br><span class="line">let g:airline_symbols.linenr = &apos;</span><br><span class="line">&apos;</span><br><span class="line">let g:airline_symbols.linenr = &apos;¶&apos;</span><br><span class="line">let g:airline_symbols.maxlinenr = &apos;&apos;</span><br><span class="line">let g:airline_symbols.maxlinenr = &apos;㏑&apos;</span><br><span class="line">let g:airline_symbols.branch = &apos;⎇&apos;</span><br><span class="line">let g:airline_symbols.paste = &apos;ρ&apos;</span><br><span class="line">let g:airline_symbols.paste = &apos;Þ&apos;</span><br><span class="line">let g:airline_symbols.paste = &apos;∥&apos;</span><br><span class="line">let g:airline_symbols.spell = &apos;Ꞩ&apos;</span><br><span class="line">let g:airline_symbols.notexists = &apos;Ɇ&apos;</span><br><span class="line">let g:airline_symbols.whitespace = &apos;Ξ&apos;</span><br></pre></td></tr></table></figure>
+
+<p>具体可在<code>~/.vim/plugged/vim-airline/doc/airline.txt</code>中查看官方文档</p>
+<h4 id="vim主题：vim-monokai-tasty"><a href="#vim主题：vim-monokai-tasty" class="headerlink" title="vim主题：vim-monokai-tasty"></a>vim主题：vim-monokai-tasty</h4><p> GitHub: <a href="https://github.com/patstockwell/vim-monokai-tasty" target="_blank" rel="noopener">https://github.com/patstockwell/vim-monokai-tasty</a></p>
+<ul>
+<li><code>~/.vimrc</code>中加入<code>Plug patstockwell/vim-monokai-tasty</code></li>
+<li><code>:PlugInstall</code></li>
+<li>把<code>~/.vim/plugged/vim-monokai-tasty/colors/vim-monokai-tasty.vim</code>复制到<code>~/.vim/colors</code>文件夹下，在<code>~/.vimrc</code>中加入<code>colorscheme vim-monokai-tasty</code></li>
+</ul>
+<p>我在第二步时，无法clone，所以我直接在<code>~/.vim/plugged</code>目录下运行<code>git clone https://github.com/patstockwell/vim-monokai-tasty.git</code></p>
+<h4 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h4><p>GitHub：<a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="noopener">https://github.com/scrooloose/nerdtree</a></p>
+<ul>
+<li><code>~/.vimrc</code>中加入`Plug ‘scrooloose/nerdtree’</li>
+<li><code>:PlugInstall</code></li>
+<li><code>~/.vimrc</code>进行如下配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&quot;配置NERDTree</span><br><span class="line">&quot;&quot;将F2设置为开关NERDTree的快捷键</span><br><span class="line">map &lt;F2&gt; :NERDTreeToggle&lt;CR&gt;</span><br><span class="line">&quot;&quot;修改树的显示图标</span><br><span class="line">let g:NERDTreeDirArrowExpandable = &apos;+&apos;</span><br><span class="line">let g:NERDTreeDirArrowCollapsible = &apos;-&apos;</span><br><span class="line">&quot;&quot;窗口位置</span><br><span class="line">let g:NERDTreeWinPos=&apos;left&apos;</span><br><span class="line">&quot;&quot;窗口尺寸</span><br><span class="line">let g:NERDTreeSize=30</span><br><span class="line">&quot;&quot;窗口是否显示行号</span><br><span class="line">let g:NERDTreeShowLineNumbers=1</span><br><span class="line">&quot;&quot;不显示隐藏文件</span><br><span class="line">let g:NERDTreeHidden=0</span><br><span class="line">&quot;&quot;打开vim时如果没有文件自动打开NERDTree</span><br><span class="line">autocmd vimenter * if !argc()|NERDTree|endif</span><br><span class="line">&quot;&quot;当NERDTree为剩下的唯一窗口时自动关闭</span><br><span class="line">autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;&amp; exists(&quot;b:NERDTree&quot;) &amp;&amp; b:NERDTree.isTabTree()) | q | endif</span><br><span class="line">&quot;&quot;打开vim时自动打开NERDTree</span><br><span class="line">&quot;autocmd vimenter * NERDTree</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="vim实现与系统剪贴板的共享"><a href="#vim实现与系统剪贴板的共享" class="headerlink" title="vim实现与系统剪贴板的共享"></a>vim实现与系统剪贴板的共享</h4><p><code>~/.vimrc</code>写入如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let mapleader=&quot;,&quot;</span><br><span class="line">&quot;可视化下与系统的复制与粘贴</span><br><span class="line">map &lt;leader&gt;v &quot;+gp</span><br><span class="line">map &lt;leader&gt;c &quot;+yy</span><br></pre></td></tr></table></figure>
+
+<p><code>,+c</code>表示复制，<code>,+v</code>进行粘贴</p>
+<h4 id="vim切换分屏快捷键修改"><a href="#vim切换分屏快捷键修改" class="headerlink" title="vim切换分屏快捷键修改"></a>vim切换分屏快捷键修改</h4><p><code>~/.vimrc</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;use ctrl+h/j/k/l to switch window</span><br><span class="line">noremap &lt;C-h&gt; &lt;C-w&gt;h</span><br><span class="line">noremap &lt;C-j&gt; &lt;C-w&gt;j</span><br><span class="line">noremap &lt;C-k&gt; &lt;C-w&gt;k</span><br><span class="line">noremap &lt;C-l&gt; &lt;C-w&gt;l</span><br></pre></td></tr></table></figure>
+
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="scotty.ink">Scott Wong</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="scotty.ink/2019/02/20/VIM相关/">scotty.ink/2019/02/20/VIM相关/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/VIM/">VIM</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/2019/02/21/GNOME相关/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">GNOME相关</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    <a class="next" href="/2019/02/18/Hexo创建记录/">
+        <span class="next-text nav-default">Hexo创建记录</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2019<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Scott Wong</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>

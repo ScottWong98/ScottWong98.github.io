@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="2019年山东省省赛训练1"><meta name="keywords" content="DFS, 思维, 连通块, Scott's Blog"><link rel="alternate" href="/default" title="Scott's Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0">
+<link rel="canonical" href="scotty.ink/2019/04/03/2019年山东省省赛训练1/">
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css"><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css"><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0">
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true,"latex":true};
+</script>
+
+    <title>2019年山东省省赛训练1 - Scott's Blog</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Scott's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">首页
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">归档
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类
+          </li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Scott's Blog</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            归档
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            标签
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            分类
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/about/">
+            关于
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">2019年山东省省赛训练1
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2019-04-03
+        </span><span class="post-category">
+            <a href="/categories/题解/">题解</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-篮球队选拔-1-1"><span class="toc-text">A. 篮球队选拔 (1/1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-黑暗意志-1-1"><span class="toc-text">B. 黑暗意志 (1/1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-调酒壶里的酸奶-0-5"><span class="toc-text">C. 调酒壶里的酸奶 (0/5)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-过分的谜题-0-0"><span class="toc-text">D. 过分的谜题 (0/0)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-不存在的泳池-1-2"><span class="toc-text">E. 不存在的泳池 (1/2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#F-fps游戏-0-0"><span class="toc-text">F. fps游戏 (0/0)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G-流连人间的苏苏-1-1"><span class="toc-text">G. 流连人间的苏苏 (1/1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#H-路哥从不低头-0-0"><span class="toc-text">H. 路哥从不低头 (0/0)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I-闪闪发光-1-2"><span class="toc-text">I. 闪闪发光 (1/2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#J-小C的数学问题-2-3"><span class="toc-text">J. 小C的数学问题 (2/3)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#K-周期串plus-2-3"><span class="toc-text">K. 周期串plus (2/3)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#L-TCMPC进阶之路-1-1"><span class="toc-text">L. TCMPC进阶之路 (1/1)</span></a></li></ol>
+    </div>
+  </div><div class="post-content"><blockquote>
+<p>题目来源：第二届全国中医药院校大学生程序设计竞赛</p>
+</blockquote>
+ <a id="more"></a>
+
+<blockquote>
+<ul>
+<li>AC: 8 / 12</li>
+<li>Rating: 34 / 147</li>
+</ul>
+</blockquote>
+<h4 id="A-篮球队选拔-1-1"><a href="#A-篮球队选拔-1-1" class="headerlink" title="A. 篮球队选拔 (1/1)"></a>A. 篮球队选拔 (1/1)</h4><p>思维</p>
+<h4 id="B-黑暗意志-1-1"><a href="#B-黑暗意志-1-1" class="headerlink" title="B. 黑暗意志 (1/1)"></a>B. 黑暗意志 (1/1)</h4><p>思维 + map</p>
+<h4 id="C-调酒壶里的酸奶-0-5"><a href="#C-调酒壶里的酸奶-0-5" class="headerlink" title="C. 调酒壶里的酸奶 (0/5)"></a>C. 调酒壶里的酸奶 (0/5)</h4><p>有两个瓶子，容量分别为$a$, $b$, 你可以有以下几种操作：</p>
+<ol>
+<li>把其中一个瓶子的水全部倒入另一个瓶子里面，直到另一个瓶子里面的水满了或者这个瓶子里的水没有了</li>
+<li>倒光其中一个瓶子里的水</li>
+<li>将其中一个瓶子里接满水</li>
+</ol>
+<p>询问最小需要几次操作使得其中一个瓶子里的水达到$c$，如果没有解，输出$-1$<br>根据欧几里得定理，可知无解的条件是：$c\ mod\ gcd(a,\ b)\ !=\ 0$<br>然后dfs就能得到最少操作次数了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? gcd(b, a % b) : a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> a, b, c, ans;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">305</span>][<span class="number">305</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> now1, <span class="keyword">int</span> now2, <span class="keyword">int</span> cnt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (now1 == c || now2 == c) &#123;</span><br><span class="line">        ans = <span class="built_in">std</span>::min(ans, cnt);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    vis[now1][now2] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> sum = now1 + now2;</span><br><span class="line">    <span class="keyword">if</span> (sum &gt;= a &amp;&amp; !vis[a][sum - a]) dfs(a, sum - a, cnt + <span class="number">1</span>), vis[a][sum - a] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; a &amp;&amp; !vis[sum][<span class="number">0</span>]) dfs(sum, <span class="number">0</span>, cnt + <span class="number">1</span>), vis[sum][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (sum &gt;= b &amp;&amp; !vis[sum - b][b]) dfs(sum - b, b, cnt + <span class="number">1</span>), vis[sum - b][b] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; b &amp;&amp; !vis[<span class="number">0</span>][sum]) dfs(<span class="number">0</span>, sum, cnt + <span class="number">1</span>), vis[<span class="number">0</span>][sum] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (!vis[<span class="number">0</span>][now2]) dfs(<span class="number">0</span>, now2, cnt + <span class="number">1</span>), vis[<span class="number">0</span>][now2] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (!vis[a][now2]) dfs(a, now2, cnt + <span class="number">1</span>), vis[a][now2] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (!vis[now1][<span class="number">0</span>]) dfs(now1, <span class="number">0</span>, cnt + <span class="number">1</span>), vis[now1][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (!vis[now1][b]) dfs(now1, b, cnt + <span class="number">1</span>), vis[now1][b] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">std</span>::<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c) &#123;</span><br><span class="line">        <span class="keyword">if</span> (c % gcd(a, b)) <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"impossible"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            ans = <span class="number">100000000</span>;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span> vis);</span><br><span class="line">            dfs(a, b, <span class="number">0</span>);</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="D-过分的谜题-0-0"><a href="#D-过分的谜题-0-0" class="headerlink" title="D. 过分的谜题 (0/0)"></a>D. 过分的谜题 (0/0)</h4><p>对$2n$个数,每次将前$n$个数字取出，按顺序插入到位于$n+1,n+2,…,2n$的数字后面，需要多少步能回到最初的序列<br>只需要考虑$1$这个数字就行了，看它每次操作后的位置，当它回到$1$这个位置时，就代表整个序列回到最初序列了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">30004</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">std</span>::<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">2</span>,  cnt = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (m == <span class="number">1</span>) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span> (m &lt;= n) m *= <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">else</span> m = <span class="number">2</span> * (m - n) - <span class="number">1</span>;</span><br><span class="line">            cnt ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cnt &lt;&lt; <span class="string">'\n'</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="E-不存在的泳池-1-2"><a href="#E-不存在的泳池-1-2" class="headerlink" title="E. 不存在的泳池 (1/2)"></a>E. 不存在的泳池 (1/2)</h4><p>分解质因数 + 思维</p>
+<h4 id="F-fps游戏-0-0"><a href="#F-fps游戏-0-0" class="headerlink" title="F. fps游戏 (0/0)"></a>F. fps游戏 (0/0)</h4><p>题意很简单，就是问子弹能在半径为r的圆上跳几次<br>但是。WA到自闭</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI = <span class="built_in">std</span>::<span class="built_in">acos</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 0.000000001</span></span><br><span class="line"><span class="keyword">double</span> a;</span><br><span class="line"><span class="keyword">int</span> d, r, c;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">std</span>::<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; d &gt;&gt; r &gt;&gt; c &gt;&gt; a;</span><br><span class="line">    <span class="keyword">double</span> angle = <span class="built_in">std</span>::<span class="built_in">atan</span>(<span class="number">1.0</span> * r / d);</span><br><span class="line">    a = a / <span class="number">180</span> * PI;</span><br><span class="line">    <span class="keyword">int</span> k = angle / a + <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::max(<span class="number">0</span>, c - k) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="G-流连人间的苏苏-1-1"><a href="#G-流连人间的苏苏-1-1" class="headerlink" title="G. 流连人间的苏苏 (1/1)"></a>G. 流连人间的苏苏 (1/1)</h4><p>暴力</p>
+<h4 id="H-路哥从不低头-0-0"><a href="#H-路哥从不低头-0-0" class="headerlink" title="H. 路哥从不低头 (0/0)"></a>H. 路哥从不低头 (0/0)</h4><p>n张海报张贴在墙上，问一次最多能撕掉多少海报<br>建图 + 求连通块</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="keyword">double</span> x1, x2, y1, y2;</span><br><span class="line">&#125;mp[<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> w, h, n;</span><br><span class="line"><span class="keyword">int</span> angle[<span class="number">5</span>];</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec[<span class="number">1005</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">gao</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y, node z)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; z.x1 &amp;&amp; x &lt; z.x2 &amp;&amp; y &gt; z.y1 &amp;&amp; y &lt; z.y2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(node a, node b)</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span> (gao(a.x1 + <span class="number">0.1</span>, a.y1 + <span class="number">0.1</span>, b)) angle[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (gao(a.x1 + <span class="number">0.1</span>, a.y2 - <span class="number">0.1</span>, b)) angle[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (gao(a.x2 - <span class="number">0.1</span>, a.y2 - <span class="number">0.1</span>, b)) angle[<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (gao(a.x2 - <span class="number">0.1</span>, a.y1 + <span class="number">0.1</span>, b)) angle[<span class="number">3</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (b.y2 &lt; a.y1 + <span class="number">0.1</span> || b.x2 &lt; a.x1 + <span class="number">0.1</span> || b.x1 &gt; a.x2 - <span class="number">0.1</span> || b.y1 &gt; a.y2 - <span class="number">0.1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">1005</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    vis[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> j : vec[i]) <span class="keyword">if</span> (!vis[j]) dfs(j);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">std</span>::<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; w &gt;&gt; h &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; mp[i].x1 &gt;&gt; mp[i].y1 &gt;&gt; mp[i].x2 &gt;&gt; mp[i].y2;</span><br><span class="line">            vec[i].clear();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans_num = <span class="number">0</span>, ans_id = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">memset</span>(angle, <span class="number">0</span>, <span class="keyword">sizeof</span> angle);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = n; j &gt; i; j--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (judge(mp[i], mp[j])) &#123;</span><br><span class="line">                    vec[i].push_back(j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (angle[<span class="number">0</span>] + angle[<span class="number">1</span>] + angle[<span class="number">2</span>] + angle[<span class="number">3</span>] == <span class="number">4</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span> vis);</span><br><span class="line">            <span class="keyword">int</span> tmp = <span class="number">0</span>;</span><br><span class="line">            vis[i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> j : vec[i]) dfs(j);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) <span class="keyword">if</span> (vis[j]) tmp++;</span><br><span class="line">            <span class="keyword">if</span> (ans_num &lt;= tmp) ans_id = i, ans_num = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans_num &lt;&lt; <span class="string">' '</span> &lt;&lt; ans_id &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="I-闪闪发光-1-2"><a href="#I-闪闪发光-1-2" class="headerlink" title="I. 闪闪发光 (1/2)"></a>I. 闪闪发光 (1/2)</h4><p>思维</p>
+<h4 id="J-小C的数学问题-2-3"><a href="#J-小C的数学问题-2-3" class="headerlink" title="J. 小C的数学问题 (2/3)"></a>J. 小C的数学问题 (2/3)</h4><p>线段树 + 前缀和 + dfs</p>
+<h4 id="K-周期串plus-2-3"><a href="#K-周期串plus-2-3" class="headerlink" title="K. 周期串plus (2/3)"></a>K. 周期串plus (2/3)</h4><p>最小循环元</p>
+<h4 id="L-TCMPC进阶之路-1-1"><a href="#L-TCMPC进阶之路-1-1" class="headerlink" title="L. TCMPC进阶之路 (1/1)"></a>L. TCMPC进阶之路 (1/1)</h4><p>等差数组求和</p>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="scotty.ink">Scott Wong</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="scotty.ink/2019/04/03/2019年山东省省赛训练1/">scotty.ink/2019/04/03/2019年山东省省赛训练1/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/DFS/">DFS</a>
+            <a href="/tags/思维/">思维</a>
+            <a href="/tags/连通块/">连通块</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/2019/04/05/2019年山东省省赛训练2/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">2019年山东省省赛训练2</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    <a class="next" href="/2019/02/23/RecordsOfUbuntu1804/">
+        <span class="next-text nav-default">Records of Ubuntu1804</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2019<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Scott Wong</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>
