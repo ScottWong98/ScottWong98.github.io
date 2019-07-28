@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="Records of Arch"><meta name="keywords" content="Arch, Scott's Blog"><link rel="alternate" href="/default" title="Scott's Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0">
+<link rel="canonical" href="scotty.ink/2019/07/26/RecordsOfArch/">
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css"><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css"><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0">
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true,"latex":true};
+</script>
+
+    <title>Records of Arch - Scott's Blog</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Scott's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">首页
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">归档
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类
+          </li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Scott's Blog</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            归档
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            标签
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            分类
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/about/">
+            关于
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Records of Arch
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2019-07-26
+        </span><span class="post-category">
+            <a href="/categories/Linux/">Linux</a>
+            <a href="/categories/Linux/Arch/">Arch</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Time-difference-between-windows-and-linux"><span class="toc-text">Time difference between windows and linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-tomcat"><span class="toc-text">Install tomcat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-sublime-text3"><span class="toc-text">Install sublime_text3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-‘ifconfig’"><span class="toc-text">Using ‘ifconfig’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Zip-commands-TODO"><span class="toc-text">Zip commands (TODO)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Put-the-application-launcher-in-rofi"><span class="toc-text">Put the application launcher in rofi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-mysql"><span class="toc-text">Install mysql</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Disable-touchpad"><span class="toc-text">Disable touchpad</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Clipboard-in-vim"><span class="toc-text">Clipboard in vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#About-sudo"><span class="toc-text">About sudo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-nodejs"><span class="toc-text">Install nodejs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-JDK12-0-1"><span class="toc-text">Install JDK12.0.1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Download-archive"><span class="toc-text">Download archive</span></a></li></ol></li></ol>
+    </div>
+  </div><div class="post-content"><blockquote>
+<p>In this file, I will record some problem and solution when I use arch linux.</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="Time-difference-between-windows-and-linux"><a href="#Time-difference-between-windows-and-linux" class="headerlink" title="Time difference between windows and linux"></a>Time difference between windows and linux</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo hwclock --systohc --localtime</span><br><span class="line">$ sudo timedatectl set-ntp 1</span><br><span class="line">$ sudo timedatectl set-timezone Asia/Shanghai</span><br><span class="line">$ sudo timedatectl set-local-rtc 1</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Install-tomcat"><a href="#Install-tomcat" class="headerlink" title="Install tomcat"></a>Install tomcat</h2><p><a href="https://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">install</a></p>
+<p>choose <code>tar.gz</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/share</span><br><span class="line">$ sudo mkdir tomcat</span><br><span class="line">$ cd tomcat</span><br><span class="line">$ sudo cp -r [...] [...]</span><br><span class="line">$ sudo chmod 757 [...] -R</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Install-sublime-text3"><a href="#Install-sublime-text3" class="headerlink" title="Install sublime_text3"></a>Install sublime_text3</h2><p><a href="http://www.sublimetext.com/docs/3/linux_repositories.html" target="_blank" rel="noopener">install</a></p>
+<p>Active it: <a href="https://blog.csdn.net/qq_26975307/article/details/89173409" target="_blank" rel="noopener">here1</a>, <a href="https://blog.csdn.net/qq_26975307/article/details/89173409" target="_blank" rel="noopener">here2</a></p>
+<p>Package: <a href="https://blog.csdn.net/kevinx_xu/article/details/87195349" target="_blank" rel="noopener">here</a></p>
+<hr>
+<h2 id="Using-‘ifconfig’"><a href="#Using-‘ifconfig’" class="headerlink" title="Using ‘ifconfig’"></a>Using ‘ifconfig’</h2><p>Archlinux don’t have this commands. So you need to install <code>net-tools</code> to use it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S net-tools</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Zip-commands-TODO"><a href="#Zip-commands-TODO" class="headerlink" title="Zip commands (TODO)"></a>Zip commands (TODO)</h2><p>Reference: <a href="https://blog.csdn.net/qq_37022150/article/details/77510850" target="_blank" rel="noopener">Here</a></p>
+<p>Install zip in archlinx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S zip</span><br><span class="line">$ zip -r xxx.zip xxx</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Put-the-application-launcher-in-rofi"><a href="#Put-the-application-launcher-in-rofi" class="headerlink" title="Put the application launcher in rofi"></a>Put the application launcher in rofi</h2><ol>
+<li>jetbrains-idea</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.local/share/applications</span><br><span class="line">$ sudo cp jetbrains-idea.desktop /usr/local/bin</span><br></pre></td></tr></table></figure>
+
+<p>Run rofi, you can see the launcher.</p>
+<ol start="2">
+<li>eclipse</li>
+</ol>
+<p>My eclipse is in <code>/opt/eclipse</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Install-mysql"><a href="#Install-mysql" class="headerlink" title="Install mysql"></a>Install mysql</h2><p>Accoding to this artical: <a href="https://www.jianshu.com/p/df31749cec5a" target="_blank" rel="noopener">Here</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S mysql</span><br></pre></td></tr></table></figure>
+
+<p>And the following will be output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:: You need to initialize the MySQL data directory prior to starting</span><br><span class="line">   the service. This can be done with mysqld --initialize command, e.g.:</span><br><span class="line">   mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql</span><br><span class="line">:: Additionally you should secure your MySQL installation using</span><br><span class="line">   mysql_secure_installation command after starting the mysqld service</span><br><span class="line">Optional dependencies for mysql</span><br><span class="line">    perl-dbd-mysql: for mysqlhotcopy, mysql_convert_table_format and mysql_setpermission</span><br></pre></td></tr></table></figure>
+
+<p>You shoule initialize your mysql accoding to this information</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql</span><br></pre></td></tr></table></figure>
+
+<p>The following will be output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2019-06-30T08:53:15.888530Z 0 [Warning] [MY-010915] [Server] &apos;NO_ZERO_DATE&apos;, &apos;NO_ZERO_IN_DATE&apos; and &apos;ERROR_FOR_DIVISION_BY_ZERO&apos; sql modes should be used with strict mode. They will be merged with strict mode in a future release.</span><br><span class="line">2019-06-30T08:53:15.888561Z 0 [System] [MY-013169] [Server] /usr/bin/mysqld (mysqld 8.0.16) initializing of server in progress as process 6507</span><br><span class="line">2019-06-30T08:53:19.132499Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 4LqyGu-f)Z)l</span><br><span class="line">2019-06-30T08:53:20.860444Z 0 [System] [MY-013170] [Server] /usr/bin/mysqld (mysqld 8.0.16) initializing of server has completed</span><br></pre></td></tr></table></figure>
+
+<p>From this, you will see your initial password. In this time, you can active your mysql.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start mysqld.service</span><br><span class="line">$ sudo systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
+
+<p>You need to change your password.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<p>Input the initial password. And change your password by this commonds.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER USER() IDENTIFIED BY &apos;your password&apos;;</span><br><span class="line">mysql&gt; \q</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Disable-touchpad"><a href="#Disable-touchpad" class="headerlink" title="Disable touchpad"></a>Disable touchpad</h2><p>Check the id of touchpad.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$xinput list</span><br></pre></td></tr></table></figure>
+
+<p>The following content will be output in your terminal:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">⎡ Virtual core pointer                    	id=2	[master pointer  (3)]</span><br><span class="line">⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ USB OPTICAL MOUSE                       	id=10	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ USB OPTICAL MOUSE  Consumer Control     	id=12	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ ETPS/2 Elantech Touchpad                	id=19	[slave  pointer  (2)]</span><br><span class="line">⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]</span><br><span class="line">    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]</span><br><span class="line">    ↳ Power Button                            	id=6	[slave  keyboard (3)]</span><br><span class="line">    ↳ Video Bus                               	id=7	[slave  keyboard (3)]</span><br><span class="line">    ↳ Video Bus                               	id=8	[slave  keyboard (3)]</span><br><span class="line">    ↳ Power Button                            	id=9	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB OPTICAL MOUSE  Keyboard             	id=11	[slave  keyboard (3)]</span><br><span class="line">    ↳ HP Wide Vision HD Camera: HP Wi         	id=17	[slave  keyboard (3)]</span><br><span class="line">    ↳ AT Translated Set 2 keyboard            	id=18	[slave  keyboard (3)]</span><br><span class="line">    ↳ HP Wireless hotkeys                     	id=20	[slave  keyboard (3)]</span><br><span class="line">    ↳ HP WMI hotkeys                          	id=21	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB OPTICAL MOUSE  Consumer Control     	id=22	[slave  keyboard (3)]</span><br></pre></td></tr></table></figure>
+
+<p>So, the id of touchpad in my computer is 19. Input the following in your terminal to disable it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ xinput disable 19</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Clipboard-in-vim"><a href="#Clipboard-in-vim" class="headerlink" title="Clipboard in vim"></a>Clipboard in vim</h2><p>Initially, vim will not support clipboard in archlinux(use <code>vim --version | grep clipboard</code> to check it). </p>
+<p>You can download <code>gvim</code> to support clipboard. After download it, you can also use <code>vim</code> to edit your file.</p>
+<hr>
+<h2 id="About-sudo"><a href="#About-sudo" class="headerlink" title="About sudo"></a>About sudo</h2><p>When you use vim to edit your file in sudo, system will use the original vimrc to disply your vim. In order to use your own vimrc, you can use <code>alias</code>.</p>
+<p>Add the following in your <code>.zshrc</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias sudo=&quot;sudo -E&quot;</span><br></pre></td></tr></table></figure>
+
+<p>If you want to learn more about sudo, please go to <code>Arch Wiki</code> or use <code>man</code> commond.</p>
+<hr>
+<h2 id="Install-nodejs"><a href="#Install-nodejs" class="headerlink" title="Install nodejs"></a>Install nodejs</h2><p>Ofiicial guide: <a href="https://github.com/nodejs/help/wiki/Installation" target="_blank" rel="noopener">clik here</a></p>
+<hr>
+<h2 id="Install-JDK12-0-1"><a href="#Install-JDK12-0-1" class="headerlink" title="Install JDK12.0.1"></a>Install JDK12.0.1</h2><h3 id="Download-archive"><a href="#Download-archive" class="headerlink" title="Download archive"></a>Download archive</h3><ol>
+<li><p>Download <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953.html" target="_blank" rel="noopener">archive</a> to <code>~/Downloads</code>, and extract it. </p>
+</li>
+<li><p>Copy source file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/lib</span><br><span class="line">$ sudo mkdir java</span><br><span class="line">$ sudo cp -r ~/Downloads/jdk-12.0.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add to enviroment</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>and add the following at the end</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># JAVA</span><br><span class="line">export JAVA_HOME=/usr/local/lib/java/jdk-12.0.1</span><br><span class="line">export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure>
+
+<p>activate</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>Check whether java is ok<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java --version</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>if the version information appears, it will successfully install the jdk12.0.1 in your computer</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java 12.0.1 2019-04-16</span><br><span class="line">Java(TM) SE Runtime Environment (build 12.0.1+12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 12.0.1+12, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
+
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="scotty.ink">Scott Wong</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="scotty.ink/2019/07/26/RecordsOfArch/">scotty.ink/2019/07/26/RecordsOfArch/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/Arch/">Arch</a>
+            </div>
+        
+        <nav class="post-nav"><a class="next" href="/2019/04/11/2019年山东省省赛训练5/">
+        <span class="next-text nav-default">2019年山东省省赛训练5</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2019<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Scott Wong</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>
